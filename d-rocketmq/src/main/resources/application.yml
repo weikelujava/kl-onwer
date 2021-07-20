@@ -1,0 +1,28 @@
+# 服务端口
+server:
+  port: 1002
+
+spring:
+  # 微服务名称
+  application:
+    name: d-rocketmq
+
+# RocketMQ config
+rocketmq:
+  # 名称服务
+  name-server: 192.168.19.130:9876
+  # 消息生产者
+  producer:
+    # 组名称
+    group: 'demo_topic'
+    # 消息超时实际
+    send-message-timeout: 5000
+
+# 日志配置
+logging:
+  config: classpath:logback-spring.xml
+  # 日志级别
+  level:
+    com:
+      alibaba:
+        nacos: ERROR

@@ -21,3 +21,60 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# OS
+.DS_Store
+[Tt]humbs.db
+
+# Compiled class file
+target/
+build/
+out/
+
+# SVN
+.svn/
+
+# Log file
+logs/
+
+# Idea
+.idea/
+*.iml
+
+# Eclipse
+.settings/
+.classpath
+.project
+.factorypath
+
+# MyEclipse
+.myeclipse/
+
+# Nodejs
+node_modules/
+
+# Vim
+.*.swp
+
+
+# JRebel
+rebel.xml
+rebel-remote.xml
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+out
+gen
+
+.idea/$PROJECT_FILE$
+.idea/.gitignore
+.idea/inspectionProfiles/
+.idea/kl-onwer.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/qaplug_profiles.xml
+.idea/vcs.xml
+.idea/libraries
+
+

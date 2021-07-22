@@ -6,7 +6,6 @@
 
 
 
-
     <!--父级工程-->
     <parent>
         <artifactId>kl-owner</artifactId>
@@ -15,7 +14,8 @@
     </parent>
 
     <!--当前服务版本-->
-    <artifactId>d-rocketmq</artifactId>
+    <groupId>com.owner</groupId>
+    <artifactId>d-rocketmq-cluster</artifactId>
     <packaging>jar</packaging>
 
     <!--版本依赖-->
@@ -55,4 +55,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

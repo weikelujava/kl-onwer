@@ -8,6 +8,7 @@
     <modules>
         <module>d-rocketmq</module>
         <module>d-rocketmq-cluster</module>
+        <module>d-demo</module>
     </modules>
 
     <groupId>com.onwer</groupId>

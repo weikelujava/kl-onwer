@@ -1,0 +1,33 @@
+server:
+  # Gateway服务端口号
+  port: 4001
+
+
+spring:
+  application:
+    # 应用服务名称
+    name: gateway-service
+
+  cloud:
+    gateway:
+      discovery:
+        # 使用服务发现客户端定义路由信息
+        locator:
+          enabled: true #当访问http://网关地址/服务名称（大写）/**地址会自动转发到http://服务名称（大写）/**地址，如果为false就不会自动转发
+          lower-case-service-id: true #为true表示服务名称（小写）
+      routes:
+        - id: user-center  #路由的ID，没有固定规则但要求唯一，简易配合服务名
+          uri: lb://user-center #匹配后提供服务的路由地址
+          predicates:
+            - Path=/api-user/** #断言，路径相匹配的进行路由
+          filters:
+            - StripPrefix=1 # 转发到具体服务，自动截取掉 /api-user的url
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8762/eureka/
+    register-with-eureka: true
+    fetch-registry: true
